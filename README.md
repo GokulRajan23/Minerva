@@ -1,6 +1,6 @@
 # Cloover AI - Voice-First Sales Engine
 
-A minimalist, voice-first autonomous sales assistant inspired by the "Minerva" UI. Cloover AI acts as a hands-free sales coach that intelligently reads customer data (Location, Name, Product Interest) directly from an Excel spreadsheet and leverages a powerful multi-agent AI pipeline to generate real-time, personalized sales playbooks.
+A minimalist, voice-first autonomous sales assistant called Minerva. Minerva acts as a hands-free sales coach that intelligently reads customer's schedule for the day and extracts data like data (Location, Name, Product Interest) and leverages a powerful multi-agent AI pipeline to generate real-time, personalized sales playbooks.
 
 ## 🚀 Key Features
 
