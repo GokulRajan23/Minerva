@@ -1,326 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gokul Rajan | Personal Portfolio</title>
-    <meta name="description" content="Portfolio of Gokul Rajan - Project Coordination & Documentation | Process Tracking & Execution.">
+    <title>Cloover AI - Sales Research Engine</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Using Marked.js for rendering markdown responses -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Using SheetJS for parsing local Excel files -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <div class="blob-bg"></div>
+    <div class="app-container">
 
-    <header>
-        <nav>
-            <div class="logo">GR</div>
-            <ul class="nav-links">
-                <li><a href="#hero">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#volunteering">Volunteering</a></li>
-            </ul>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="hero-content reveal-on-load">
-                <h1>Hi, I'm <span class="highlight">Gokul Rajan</span></h1>
-                <h2>Project Coordination | Documentation | Process Tracking</h2>
-                <p class="location"><i class="fa-solid fa-location-dot"></i> Germany</p>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/gokul-rajan-ece" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/GokulRajan23" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="mailto:gokulrece23@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="tel:+4915510297960" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+        <header class="app-header glass">
+            <div class="brand">
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                </div>
+                <div>
+                    <h1>Cloover AI</h1>
+                    <span class="subtitle">Sales Research Engine</span>
                 </div>
             </div>
-        </section>
-
-        <!-- About / Skills Section -->
-        <section id="skills" class="skills-section">
-            <h2 class="section-title reveal">Core Competencies</h2>
-            <div class="skills-grid">
-                <div class="glass-card skill-card reveal">
-                    <h3><i class="fa-solid fa-list-check"></i> Project Support</h3>
-                    <ul>
-                        <li>Project coordination</li>
-                        <li>Task tracking</li>
-                        <li>Process execution</li>
-                        <li>Documentation management</li>
-                    </ul>
-                </div>
-                <div class="glass-card skill-card reveal">
-                    <h3><i class="fa-solid fa-toolbox"></i> Tools & Platforms</h3>
-                    <div class="tags">
-                        <span>SAP</span> <span>SharePoint</span> <span>ServiceNow</span> <span>IBM Maximo</span> <span>Microsoft Office</span> <span>MS Teams</span>
-                    </div>
-                </div>
-                <div class="glass-card skill-card reveal">
-                    <h3><i class="fa-solid fa-file-signature"></i> Documentation</h3>
-                    <ul>
-                        <li>Technical documentation</li>
-                        <li>Report preparation</li>
-                        <li>Data maintenance</li>
-                        <li>Structured documentation</li>
-                    </ul>
-                </div>
-                <div class="glass-card skill-card reveal">
-                    <h3><i class="fa-solid fa-earth-europe"></i> Languages</h3>
-                    <div class="language-bars">
-                        <div class="lang">
-                            <span>English (C1)</span>
-                            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="lang">
-                            <span>German (A2)</span>
-                            <div class="progress-bar"><div class="progress" style="width: 30%;"></div></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="status">
+                <span class="status-dot"></span> Online
             </div>
-        </section>
+        </header>
 
-        <!-- Experience Section -->
-        <section id="experience" class="timeline-section">
-            <h2 class="section-title reveal">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card hover-lift">
-                        <h3>SAP BASIS Administrator</h3>
-                        <h4>Kyndryl Solutions Pvt. Ltd <span>| Chennai, India</span></h4>
-                        <span class="date">Aug 2023 – Sept 2025</span>
-                        <ul>
-                            <li>Supported structured project-related workflows in an SAP-based environment for a global manufacturing client (Henkel)</li>
-                            <li>Maintained and updated process and system documentation</li>
-                            <li>Tracked system activities and workflows</li>
-                            <li>Collaborated with cross-functional teams</li>
-                            <li>Validated and maintained operational data</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card hover-lift">
-                        <h3>Python Programmer</h3>
-                        <h4>Institution of Electronics & Telecommunication Engineers <span>| Remote</span></h4>
-                        <span class="date">Nov 2020 – Dec 2020</span>
-                        <ul>
-                            <li>Processed and validated datasets</li>
-                            <li>Cleaned and organized data</li>
-                            <li>Automated simple data handling tasks</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card hover-lift">
-                        <h3>Technical Content Analyst</h3>
-                        <h4>StudyMonk.Inc <span>| Remote</span></h4>
-                        <span class="date">Oct 2020 – Nov 2020</span>
-                        <ul>
-                            <li>Prepared structured technical documentation</li>
-                            <li>Created clear and concise content</li>
-                            <li>Ensured consistency and quality across formats</li>
-                        </ul>
-                    </div>
-                </div>
+        <main class="chat-container">
+            <div id="chat-history" class="chat-history">
+                <!-- Messages will be injected here -->
             </div>
-        </section>
+        </main>
 
-        <!-- Education & Certifications -->
-        <section id="education" class="edu-cert-section">
-            <h2 class="section-title reveal">Education & Certifications</h2>
-            <div class="edu-cert-grid">
-                
-                <div class="education reveal">
-                    <div class="glass-card edu-card hover-lift">
-                        <h3>Master of Science</h3>
-                        <h4>International Information Systems</h4>
-                        <p>Friedrich-Alexander-University<br>Erlangen-Nuremberg, Germany</p>
-                        <span class="date">Oct 2025 – Present</span>
-                    </div>
-                    <div class="glass-card edu-card hover-lift mt-4">
-                        <h3>Bachelor of Engineering</h3>
-                        <h4>Electronics and Communication Engineering</h4>
-                        <p>Anna University<br>Chennai, India</p>
-                        <span class="date">Aug 2019 – Aug 2023</span>
-                    </div>
-                </div>
-
-                <div class="certifications reveal">
-                    <div class="glass-card cert-card">
-                        <h3><i class="fa-solid fa-certificate"></i> Certifications</h3>
-                        <ul class="cert-list">
-                            <li><i class="fa-solid fa-check text-primary"></i> Prompt Engineering with Gemini, Claude & ChatGPT</li>
-                            <li><i class="fa-solid fa-check text-primary"></i> Distributed Platform – Windows & VMware Admin</li>
-                            <li><i class="fa-solid fa-check text-primary"></i> Microsoft Power BI – Data Visualization and Reporting</li>
-                            <li><i class="fa-solid fa-check text-primary"></i> Microsoft Certified: Azure Fundamentals (AZ-900)</li>
-                            <li><i class="fa-solid fa-check text-primary"></i> Microsoft Certified: Azure AI Fundamentals (AI-900)</li>
-                            <li><i class="fa-solid fa-check text-primary"></i> Google Cloud Computing Foundations</li>
-                            <li><i class="fa-solid fa-check text-primary"></i> Automation Fundamentals (Kyndryl)</li>
-                        </ul>
-                    </div>
-                </div>
+        <footer class="app-footer static">
+            <div class="input-wrapper glass">
+                <textarea id="user-input"
+                    placeholder="Enter Customer Name, Address, and Product Interest... (Press Enter to send, Shift+Enter for new line)"
+                    rows="1"></textarea>
+                <button id="mic-btn" aria-label="Use Microphone" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                </button>
+                <button id="send-btn" aria-label="Send message" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
             </div>
-        </section>
-        
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <h2 class="section-title reveal">Projects & Hackathons</h2>
-            <div class="projects-grid">
-                
-                <!-- Project 1 -->
-                <div class="glass-card project-card reveal hover-lift">
-                    <div class="project-header">
-                        <h3>AI Founding Agent Hackathon</h3>
-                        <span class="category-badge">Backend / AI Application</span>
-                    </div>
-                    <p class="description">Developed a backend-driven application to process structured inputs and generate decision-support outputs using n8n.</p>
-                    <ul class="key-contributions">
-                        <li>Designed system workflows integrating multiple components</li>
-                        <li>Implemented backend logic for efficient data handling</li>
-                        <li>Simulated real-world application behavior and data flow</li>
-                    </ul>
-                    <div class="tags">
-                        <span>Backend Architecture</span> <span>Data Processing Pipelines</span> <span>Workflow Design</span> <span>Application Logic</span>
-                    </div>
-                </div>
+        </footer>
 
-                <!-- Project 2 -->
-                <div class="glass-card project-card reveal hover-lift">
-                    <div class="project-header">
-                        <h3>Smart India Hackathon</h3>
-                        <span class="category-badge">Database & Backend System</span>
-                    </div>
-                    <p class="description">Built a system with a MySQL database backend for structured data storage and retrieval.</p>
-                    <ul class="key-contributions">
-                        <li>Designed relational database schemas</li>
-                        <li>Implemented SQL queries for optimized data access</li>
-                        <li>Integrated backend logic with application components</li>
-                    </ul>
-                    <div class="tags">
-                        <span>MySQL</span> <span>Relational Database Design</span> <span>SQL Optimization</span> <span>Backend Integration</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/GokulRajan23/Sustainable-and-No-Contact-Attendance-System" target="_blank" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="glass-card project-card reveal hover-lift">
-                    <div class="project-header">
-                        <h3>Alcohol Detection System with Engine Locking</h3>
-                        <span class="category-badge">Embedded Systems / IoT</span>
-                    </div>
-                    <p class="description">Designed a system to detect alcohol levels and automatically lock the vehicle engine if a threshold is exceeded.</p>
-                    <ul class="key-contributions">
-                        <li>Developed alcohol detection using MQ3 sensor</li>
-                        <li>Implemented engine locking mechanism</li>
-                        <li>Handled both hardware and software integration</li>
-                    </ul>
-                    <div class="tags">
-                        <span>Arduino IDE</span> <span>C++</span> <span>MQ3 Sensor</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/GokulRajan23/Alcohol-Detection-System-with-Engine-Locking" target="_blank" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="glass-card project-card reveal hover-lift">
-                    <div class="project-header">
-                        <h3>Gas Leakage Monitoring & Alerting System</h3>
-                        <span class="category-badge">IoT + Mobile Application</span>
-                    </div>
-                    <p class="description">Engineered a real-time LPG gas leakage detection and alert system with mobile notifications.</p>
-                    <ul class="key-contributions">
-                        <li>Built real-time gas leakage detection system</li>
-                        <li>Implemented automated alert mechanisms</li>
-                        <li>Developed cross-platform mobile app for notifications</li>
-                    </ul>
-                    <div class="tags">
-                        <span>Arduino UNO</span> <span>MIT App Inventor</span> <span>Node-RED</span> <span>TinkerCAD</span> <span>GPS Module</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://tinyurl.com/gas-leakage-monitoring" target="_blank" class="btn"><i class="fa-solid fa-link"></i> Project link</a>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="glass-card project-card reveal hover-lift">
-                    <div class="project-header">
-                        <h3>Metamaterial Antenna for Wideband Applications</h3>
-                        <span class="category-badge">Research / Simulation</span>
-                    </div>
-                    <p class="description">Designed and simulated a metamaterial antenna to improve bandwidth and performance.</p>
-                    <ul class="key-contributions">
-                        <li>Designed metamaterial-based antenna structure</li>
-                        <li>Performed simulations using CST Studio Suite</li>
-                        <li>Used MATLAB for data analysis and modeling</li>
-                    </ul>
-                    <div class="tags">
-                        <span>CST Studio Suite</span> <span>MATLAB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://tinyurl.com/design-of-antenna" target="_blank" class="btn"><i class="fa-solid fa-link"></i> Project link</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        
-        <!-- Volunteering Section -->
-        <section id="volunteering" class="timeline-section">
-            <h2 class="section-title reveal">Volunteering</h2>
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card hover-lift">
-                        <h3>Secretary</h3>
-                        <h4>Electronics and Communication Engineers Association <span>| Chennai, India</span></h4>
-                        <span class="date">2021 – 2022</span>
-                        <ul>
-                            <li>Coordinated multi-team activities</li>
-                            <li>Organized meetings and stakeholder communication</li>
-                            <li>Prepared reports and documentation</li>
-                            <li>Tracked tasks and follow-ups</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card hover-lift">
-                        <h3>Joint Secretary</h3>
-                        <h4>Electronics and Communication Engineers Association <span>| Chennai, India</span></h4>
-                        <span class="date">2020 – 2021</span>
-                        <ul>
-                            <li>Supported planning and execution of activities</li>
-                            <li>Assisted in communication and coordination</li>
-                            <li>Maintained documentation and reporting</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Gokul Rajan. Built with <i class="fa-solid fa-heart align-icon"></i> & Modern Web Flow.</p>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
